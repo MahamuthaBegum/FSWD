@@ -6,10 +6,11 @@
 
 body {
     font-family: "Noto Sans", sans-serif;
+        margin: 0;
+        overflow-x: hidden;
 }
 
 /*navbar*/
-
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -20,42 +21,42 @@ body {
     background-color: white;
     z-index: 1;
 }
+
 .navbar__s1 {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 }
+
 .navbar__s1 i {
     display: none;
 }
+
+.navbar__s1 i:hover {
+    cursor: pointer;
+}
+
 .navbar__s1 img {
     width: 40px;
 }
+
 .navbar__s2 {
     display: flex;
-    gap: 50px;
-}
-.discover:hover {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    cursor: pointer;
+    gap: 5px;
 }
 
-.trips:hover {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    cursor: pointer;
+.navbar__s2 p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
 }
 
-.review:hover {
+.navbar__s2 p:hover {
     background-color: #f2f2f2;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.forms:hover {
-    background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -94,7 +95,6 @@ body {
     cursor: pointer;
 }
 
-
 .sideline {
     background-color: grey;
     height: 22px;
@@ -106,7 +106,8 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 30px;
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 /*list*/
@@ -122,16 +123,14 @@ body {
     background-color: white;
     z-index: 1;
 }
-.list__1,.list__2,.list__3,.list__4,.list__5,.list__6 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.list__1 {
-    border-bottom: solid 2px black;
-}
+
 .list:hover {
     cursor: pointer;
+}
+
+.list__item:hover {
+    cursor: pointer;
+    border-bottom: solid 2px black;
 }
 
 /*search-bar*/
@@ -149,12 +148,14 @@ body {
     border: solid 2px #e0e0e0;
     background-color: #fff;
 }
+
 .search-bar__s1 {
     display: flex;
     align-items: center;
     gap: 10px;
     flex: 1;
 }
+
 .search-bar__s1 input {
     padding-left: 10px;
     border: none;
@@ -162,9 +163,11 @@ body {
     width: 100%;
     min-width: 150px;
 }
+
 .search-bar__s1 input:focus {
     outline: none;
 }
+
 .search-bar__s2 input {
     background-color: #34e0a1;
     color: black;
@@ -175,41 +178,42 @@ body {
     border: none;
     cursor: pointer;
 }
+
 .search-bar__s2 input:hover {
     background-color: #83eabd;
 }
 
-/*tripmaining*/
-
+/*tripmain*/
 .trip {
-    position: relative;
     color: white;
-    margin-top: 30px;
+    align-items: center;
+    position: relative;
     display: flex;
     justify-content: center;
 }
-.tripbody {
-    position: relative;
-    justify-content: center;
-}
+
 .trip img {
-    width: 1100px;
+    width: 1400px;
     height: 500px;
     border-radius: 10px;
 }
+
 .trip__text {
+    padding-left: 30px;
     width: 500px;
     height: 400px;
     position: absolute;
     top: 20%;
     left: 10%;
 }
+
 .trip__text1 {
     display: flex;
     gap: 10px;
     align-items: center;
     font-size: 30px;
 }
+
 .trip__text1 h3 {
     background-color: white;
     border: black solid 1px;
@@ -218,14 +222,17 @@ body {
     color: black;
     text-align: center;
 }
+
 .trip__text2 {
     font-size: 25px;
     padding-top: 10px;
 }
+
 .trip__text3 {
     font-size: 20px;
     padding-top: 10px;
 }
+
 .trip__text4 {
     display: flex;
     gap: 5px;
@@ -241,63 +248,73 @@ body {
     padding-left: 15px;
     font-size: 15px;
 }
+
 .trip__text4:hover {
     background-color: #f2f2f2;
     cursor: pointer;
-
-    /*division1*/
 }
+
+/*division1*/
+
+.seasides {
+    padding-left: 10%;
+    padding-top: 80px;
+}
+
 .seasides__text {
     font-size: 20px;
-    padding-left: 10%;
-    padding-top: 100px;
+
 }
+
 .seasides__text h3 {
     padding-bottom: 10px;
 }
-  .beach-card {
+
+.card {
     display: flex;
-    width: 300px;
-    position: relative;
-    border-radius: 15px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-  }
-  .beach-card img {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
     width: 100%;
-    height: auto;
-    border-radius: 15px;
-  }
-  .beach-card span {
+}
+
+.beach-card {
+    position: relative;
+}
+
+.beach-card span {
     position: absolute;
     bottom: 10px;
     left: 10px;
     color: white;
     font-weight: bold;
-    font-size: 1.5rem;
-  }
-.card {
-    display: flex;
-    gap: 20px;
-    padding-left: 10%;
-    padding-top: 20px;
-    position: relative;
+    font-size: 25px;
 }
 
 /*division2*/
+
+.madras {
+    padding-left: 10%;
+    padding-top: 80px;
+
+}
+
 .madras__text {
     font-size: 20px;
-    padding-left: 10%;
-    padding-top: 100px;
+
 }
+
 .madras__text h3 {
     padding-bottom: 10px;
 }
+
 .card2 {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 30px;
-    padding-left: 10%;
 }
+
 .text2 {
     font-size: 20px;
     width: 300px;
@@ -305,21 +322,26 @@ body {
 }
 
 /*division3*/
-.chennai__text {
-    font-size: 20px;
+.chennai {
     padding-left: 10%;
-    padding-top: 100px;
+    padding-top: 80px;
 
 }
+
+.chennai__text {
+    font-size: 20px;
+
+}
+
 .chennai__text h3 {
     padding-bottom: 10px;
 }
 
 .card3 {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 30px;
-    padding-left: 10%;
 }
 
 .text3 {
@@ -328,23 +350,25 @@ body {
     padding-bottom: 5px;
 }
 
+/*division4*/
 .Explore {
     background-color: #f2f1ec;
     margin-top: 80px;
-    height: 500px
+    height: 500px;
+
 }
 
 .Explore__text h2 {
     font-size: 30px;
-    padding-left: 10%;
     padding-top: 50px;
+    padding-left: 10%;
 }
 
 .card4 {
     display: flex;
     gap: 20px;
     padding-top: 30px;
-    padding-left: 10%;
+    padding-left: 13%;
 }
 
 .text4 {
@@ -353,12 +377,16 @@ body {
     padding-top: 20px;
 }
 
+/*division5*/
+
+.dreamtrip {
+    padding-left: 10%;
+    padding-top: 80px;
+
+}
 
 .dreamtrip__text {
     font-size: 20px;
-    padding-left: 10%;
-    padding-top: 100px;
-    padding-bottom: 10px;
 }
 
 .dreamtrip__text h3 {
@@ -367,36 +395,44 @@ body {
 
 .card5 {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 20px;
-    padding-left: 10%;
-
+    width: 100%;
+}
+.card5__1{
     position: relative;
 }
 
 .text1 {
     color: white;
     width: 150px;
-    height: 60px;
     position: absolute;
-    top: 180px;
-    padding-left: 10px;
+bottom: 10px;
+font-size: 25px ;
+font-weight: bold;
 }
+/*division6*/
 
+.topdestination {
+    padding-left: 10%;
+    padding-top: 80px;
+
+}
 
 .topdestination__text h2 {
     font-size: 25px;
-    padding-left: 10%;
-    padding-top: 100px;
 }
-
 
 .card6 {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 20px;
-    padding-left: 10%;
+}
+.card6__1{
     position: relative;
+
 }
 
 .text1 {
@@ -408,23 +444,28 @@ body {
     padding-left: 10px;
 }
 
+/*division7*/
+.topdestination2 {
+    padding-left: 10%;
+    padding-top: 80px;
+}
+
 .topdestination2__text {
     font-size: 20px;
-    padding-left: 10%;
-    padding-top: 100px;
     padding-bottom: 10px;
 }
 
 .topdestination2__text h3 {
     padding-bottom: 10px;
-
 }
 
 .card7 {
     display: flex;
-    padding-left: 10%;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 20px;
+}
+.card7__1{
     position: relative;
 }
 
@@ -434,20 +475,18 @@ body {
     height: 60px;
     position: absolute;
     top: 180px;
-    padding-left: 10px;
 }
 
+/*division8*/
 
 .homerental {
-    margin-top: 80px;
     height: 500px;
-
+    padding-left: 10%;
+    padding-top: 80px;
 }
 
 .homerental__text {
     font-size: 20px;
-    padding-left: 10%;
-    padding-top: 50px;
 }
 
 .card8__text {
@@ -456,23 +495,23 @@ body {
 
 .card8 {
     display: flex;
-    padding-left: 10%;
     gap: 20px;
     padding-top: 30px;
 }
 
-
+/*division9*/
 .background {
     position: relative;
     margin-bottom: 90px;
+
 }
 
 .background__text {
     position: absolute;
     top: 180px;
     width: 400px;
-    padding-left: 10%;
     font-size: 20px;
+    padding-left: 10%;
 }
 
 .background__text h1 {
@@ -496,7 +535,7 @@ body {
     background-color: #333333;
 }
 
-
+/*footer*/
 .footer {
     background-color: #e0e0e0;
     width: 100%;
@@ -523,6 +562,11 @@ body {
     padding-left: 40px;
 }
 
+.footer__title {
+    font-weight: 600;
+    line-height: 2px;
+    padding-bottom: 8px;
+}
 
 .footer2 {
     display: flex;
@@ -656,10 +700,21 @@ body {
     .navbar__s3__one {
         display: none;
     }
+
+    .footer1 p {
+        display: none;
+    }
+
+    .footer1 {
+        display: block;
+    }
+
+    .footer {
+        padding-left: 5px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    body {}
 
     .navbar {
         flex-direction: column;
@@ -705,22 +760,10 @@ body {
         width: 100%;
     }
 
-    .scroll-wrapper {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-      }
     
-      .beach-card {
-        scroll-snap-align: start;
-      }
+
+  
     
-      .scroll-wrapper::-webkit-scrollbar {
-        display: none;
-      }
+
     
-      .scroll-wrapper {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
 }
