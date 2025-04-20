@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('./Images/Background.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+.enroll{
+    float: right;
+    padding: 20px 30px 0 0;
+    animation: rainbow 3s infinite, bounceUpDown 1.5s infinite;
+}
+@keyframes rainbow {
+    0% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: green; }
+    66% { color: blue; }
+    83% { color: indigo; }
+    100% { color: violet; }
+  }
+  @keyframes bounceUpDown {
+    0%, 100% {
+      transform: translateY(10);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+}
+
+.Heading {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    color: brown;
+    padding-top: 80px;
+}
+
+.Form1,
+.Form2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.table1 {
+    border: solid black 2px;
+    width: 400px;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table1 tr {
+    height: 40px;
+}
+
+.table1 td {
+    border: solid black 2px;
+    font-size: larger;
+    padding: 10px;
+}
+
+.table1 input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: medium;
+    background-color: transparent;
+}
+
+.radio-group label {
+    font-size: 17px;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.table1 select {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.savebtn {
+    width: 100%;
+    background-color:coral;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: medium;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.savebtn:hover {
+    background-color: lightgreen;
+}
+
+.table2 {
+    border: solid 2px grey;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table2 th {
+    border: solid 3px grey;
+    padding: 10px;
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: none;
+    user-select: none;
+}
+
+.popupcontainer {
+    background-color: #729FCF;
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+    height: 100px;
+}
+
+.popupcontent {
+    padding: 40px 0 40px 0;
+    font-size: x-large;
+    text-align: center;
+}
+
+.close {
+    background-color: #FF0000;
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 3px 10px 3px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    float: right;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.close:hover {
+    opacity: 1;
+}
