@@ -6,6 +6,7 @@
 body{
     background-image: url('./Images/Background.jpg');
     background-size: cover;
+    background-repeat: repeat;
 }
 .enroll{
     float: right;
@@ -102,6 +103,8 @@ body{
     border: solid 2px grey;
     margin-top: 20px;
     border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
 }
 
 .table2 th {

@@ -17,7 +17,7 @@
     </div>
     <h1 class="enroll">Enroll Now!!!</h1>
     <h1 class="Heading">Student Form</h1>
-    <p style="text-align: center; font-size: medium; font-weight: 700;" id="status">Add Details</p>
+    <p style="display: block; text-align: center; font-size: medium; font-weight: 700;" id="status">Add Details</p>
     <div class="Form1">
         <table class="table1">
             <tr>
@@ -95,6 +95,7 @@
     var heading = document.querySelector(".Heading")
     var table2 = document.querySelector(".table2")
     var statuslabel = document.getElementById("status")
+    var text1 = document.querySelector(".enroll")
 
     savebtn.addEventListener("click", function () {
         console.log("Name:", username.value);
@@ -107,6 +108,8 @@
             heading.style.display = "none"
             form1.style.display = "none"
             form2.style.display = "none"
+            statuslabel.style.display = "none"
+            text1.style.display = "none"
         }
         else {
             if (savebtn.textContent == "UPDATE") {
@@ -208,7 +211,9 @@
     });
     close.addEventListener("click", function () {
         popup.style.display = "none"
+        statuslabel.style.display = "block"
         heading.style.display = "block"
+        text1.style.display = "flex";
         form1.style.display = "flex"
         form2.style.display = "flex"
     })
