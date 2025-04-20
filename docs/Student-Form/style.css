@@ -6,7 +6,6 @@
 body{
     background-image: url('./Images/Background.jpg');
     background-size: cover;
-    overflow: hidden;
 }
 .enroll{
     float: right;
