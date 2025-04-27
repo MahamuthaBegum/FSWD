@@ -12,73 +12,78 @@
 </head>
 
 <body>
-    <!--Responsive Navbar-->
+   <!--Responsive Navbar-->
     <nav class="bg-green-100 p-4 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        <svg  id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
-        <ul class=" flex gap-5 text-gray-700 md:flex">
-            <li>
-                <a class=" hover:underline  hover:text-black" href="index.html">Home</a>
-            </li>
-            <li>
-                <a class=" hover:underline hover:text-black" href="product.html">Products</a>
-            </li>
-            <li>
-                <a class=" hover:underline hover:text-black" href="contact.html">Contact</a>
-            </li>
+        <ul class=" flex gap-5 text-gray-700 hidden md:flex">
+            <li><a class=" hover:underline  hover:text-black" href="index.html">Home</a> </li>
+            <li><a class=" hover:underline hover:text-black" href="product.html">Products</a> </li>
+            <li><a class=" hover:underline hover:text-black" href="contact.html">Contact</a> </li>
         </ul>
     </nav>
+<!--Side Navbar-->
+<section id="sidenav" class="bg-green-100 fixed top-0  z-20 transition-all duration-1000" style="width: 50%; height: 100vh; right:-50%" >
+    <div class="text-right p-5">
+        <p id="closenav" class="inline cursor-pointer">X</p>
+    </div>
+    <ul class=" flex flex-col gap-10 items-center text-gray-700 ">
+        <li><a class=" hover:underline  hover:text-black" href="index.html">Home</a> </li>
+        <li><a class=" hover:underline hover:text-black" href="product.html">Products</a> </li>
+        <li><a class=" hover:underline hover:text-black" href="contact.html">Contact</a> </li>
+    </ul>
+</section>
 
     <!--Search-->
     <section class="text-center">
         <h1 class="font-bold text-2xl p-2 m-1 ">Our Products</h1>
-        <input type="text" placeholder="search for a product...." class="border border-black w-9/12 p-1 mb-5">
+        <input id="search" type="text" placeholder="search for a product...." class="border border-black w-9/12 p-1 mb-5">
     </section>
 
     <!--Bestseller-->
     <section class="text-center p-2">
-        <div class="grid grid-cols-2 md:grid-cols-4  p-3 m-2">
+        <div id="productcontainer" class="grid grid-cols-2 md:grid-cols-4  p-3 m-2">
             <div>
                 <img src="./images/project1.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>Rose Plant</p>
+                <p id="plantname">Rose Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/project2.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>Lily Plant</p>
+                <p id="plantname">Lily Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/project3.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>Hibiscus Rose</p>
+                <p id="plantname">Hibiscus Rose</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/project4.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>Rose Plant</p>
+                <p id="plantname">Rose Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/project5.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>New Pet Plant</p>
+                <p id="plantname">New Pet Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/project6.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>Rose Plant</p>
+                <p id="plantname">Rose Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/project7.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>lily Plant</p>
+                <p id="plantname">lily Plant</p>
                 <p>$20</p>
             </div>
             <div>
                 <img src="./images/project8.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
-                <p>Rose Plant</p>
+                <p id="plantname">Rose Plant</p>
                 <p>$20</p>
             </div>
         </div>
@@ -90,6 +95,7 @@
         <p>The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interest</p>
         <p>@ 2021 Greenday.com</p>
     </section>
+    <script src="product.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Nostra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- offer -->
+    <section class="offer">
+        <p>Sign Up and <b>GET 20% OFF</b> for your first Order</p>
+        <i id="close" class="fa-solid fa-xmark" style="cursor: pointer;"></i>
+    </section>
+
+    <!-- Navbar -->
+    <section class="Nav_bar">
+        <div class="Title">
+            <h1>Nostra</h1>
+        </div>
+        <div class="menus">
+            <a href="index.html">Home</a>
+            <a href="index.html#newarrival">New Arrival</a>
+            <a href="index.html#mostwanted">Most Wanted</a>
+            <a href="collection.html">Collections</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="navicon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+
+    <!-- Navbar Side -->
+    <section class="Navbar_side">
+        <i id="close_side" class="fa-solid fa-xmark" style="cursor: pointer; float: right;"></i>
+        <div class="links">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="links">
+            <a href="index.html#newarrival">New Arrival</a>
+        </div>
+        <div class="links">
+            <a href="index.html#mostwanted">Most Wanted</a>
+        </div>
+        <div class="links">
+            <a href="collection.html">Collections</a>
+        </div>
+        <div class="links">
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="Collection_content">
+        <sectionc class="TopSection">
+            <div class="Filters">
+                <div class="filtericon" id="clearfilter">
+                    <i class="fa-solid fa-filter-circle-xmark"></i>
+                </div>
+                <h1  style="padding-top: 0px;">Occasion</h1>
+                <div class="filter_item">
+                    <input type="checkbox" id="wedding" name="occasion" value="Wedding">
+                    <label for="wedding">Wedding</label>
+                </div>
+                <div class="filter_item">
+                    <input type="checkbox" id="casual" name="occasion" value="Casual">
+                    <label for="casual">Casual</label>
+                </div>
+                <div class="filter_item">
+                    <input type="checkbox" id="formal" name="occasion" value="Formal">
+                    <label for="formal">Formal</label>
+                </div>
+                <div class="filter_item">
+                    <input type="checkbox" id="sports" name="occasion" value="Sports">
+                    <label for="sports">Sports</label>
+                </div>
+                <h1>Color</h1>
+                <div class="filter_item">
+                    <input type="checkbox" id="multicolor" name="color" value="Multicolor">
+                    <label for="multicolor">Multicolor</label>
+                </div>
+                <div class="filter_item">
+                    <input type="checkbox" id="blue" name="color" value="Blue">
+                    <label for="blue">Blue</label>
+                </div>
+                <div class="filter_item">
+                    <input type="checkbox" id="black" name="color" value="Black">
+                    <label for="black">Black</label>
+                </div>
+                <div class="filter_item">
+                    <input type="checkbox" id="white" name="color" value="White">
+                    <label for="white">White</label>
+                </div>
+                <h1>Arrivals</h1>
+                <div class="filter_item">
+                    <input type="checkbox" id="new" name="arrival" value="New">
+                    <label for="new">New</label>
+                </div>
+                <div class="filter_item">
+                    <input type="checkbox" id="old" name="arrival" value="Old">
+                    <label for="old">Old</label>
+                </div>
+            </div>
+            <div class="Products">
+                <div class="searchbar">
+                    <input type="text" placeholder="Search for products" class="search">
+                    <i class="fa-solid fa-magnifying-glass" style="font-size: 2vw; transition: color 0.3s ease; cursor: pointer;" onmouseover="this.style.color='Gray';" onmouseout="this.style.color='';"></i>
+                </div>
+                <div class="product_collections">
+                    <div class="product_item" data-occasion="Casual" data-color="Multicolor" data-arrival="New">
+                        <img src="Images/floral1.jpg" alt="Product 1">
+                        <h2 class="product_name">Casual Shirt</h2>
+                        <p>&#8377;599</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="Multicolor" data-arrival="New">
+                        <img src="Images/floral2.jpg" alt="Product 2">
+                        <h2 class="product_name">Summer Green</h2>
+                        <p>&#8377;699</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="Multicolor" data-arrival="New">
+                        <img src="Images/floral3.jpg" alt="Product 3">
+                        <h2 class="product_name">Floral Shirt</h2>
+                        <p>&#8377;599</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="White" data-arrival="New">
+                        <img src="Images/floral4.jpg" alt="Product 4">
+                        <h2 class="product_name">White Beach Shirt</h2>
+                        <p>&#8377;699</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="Blue" data-arrival="New">
+                        <img src="Images/floral5.jpg" alt="Product 5">
+                        <h2 class="product_name">Floral Shirt</h2>
+                        <p>&#8377;799</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="Multicolor" data-arrival="New">
+                        <img src="Images/floral6.jpg" alt="Product 6">
+                        <h2 class="product_name">Double Color Shirt</h2>
+                        <p>&#8377;499</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="Multicolor" data-arrival="New">
+                        <img src="Images/floral7.jpg" alt="Product 7">
+                        <h2 class="product_name">Floral Shirt</h2>
+                        <p>&#8377;680</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="Black" data-arrival="Old">
+                        <img src="Images/shirt15.jpg" alt="Product 8">
+                        <h2 class="product_name">Black Cotton Shirt</h2>
+                        <p>&#8377;590</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Formal" data-color="Black" data-arrival="New">
+                        <img src="Images/shirt16.jpg" alt="Product 9">
+                        <h2 class="product_name">Black Shirt</h2>
+                        <p>&#8377;590</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Formal" data-color="Blue" data-arrival="New">
+                        <img src="Images/shirt17.jpg" alt="Product 10">
+                        <h2 class="product_name">Blue Formal Shirt</h2>
+                        <p>&#8377;590</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Casual" data-color="Multicolor" data-arrival="Old">
+                        <img src="Images/shirt18.jpg" alt="Product 11">
+                        <h2 class="product_name">Casual Beige Shirt</h2>
+                        <p>&#8377;690</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Formal" data-color="White" data-arrival="New">
+                        <img src="Images/shirt19.jpg" alt="Product 12">
+                        <h2 class="product_name">Regular White Shirt</h2>
+                        <p>&#8377;590</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Wedding" data-color="Multicolor" data-arrival="Old">
+                        <img src="Images/shirt26.jpg" alt="Product 13">
+                        <h2 class="product_name">Blue Crown Shirt</h2>
+                        <p>&#8377;1490</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Sports" data-color="Multicolor" data-arrival="Old">
+                        <img src="Images/shirt21.jpg" alt="Product 14">
+                        <h2 class="product_name">Black Crown Shirt</h2>
+                        <p>&#8377;690</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Sports" data-color="Blue" data-arrival="New">
+                        <img src="Images/shirt22.jpg" alt="Product 15">
+                        <h2 class="product_name">Blue Sports Shirt</h2>
+                        <p>&#8377;690</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Sports" data-color="Black" data-arrival="Old">
+                        <img src="Images/shirt23.jpg" alt="Product 16">
+                        <h2 class="product_name">Black Sports Shirt</h2>
+                        <p>&#8377;690</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Wedding" data-color="Black" data-arrival="New">
+                        <img src="Images/shirt24.jpg" alt="Product 17">
+                        <h2 class="product_name">Black Crown Shirt</h2>
+                        <p>&#8377;1690</p>
+                        <button>Add to Cart</button>
+                    </div>
+                    <div class="product_item" data-occasion="Wedding" data-color="White" data-arrival="Old">
+                        <img src="Images/shirt25.jpg" alt="Product 18">
+                        <h2 class="product_name">White Crown Shirt</h2>
+                        <p>&#8377;1690</p>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </sectionc>
+
+        <!-- News letter -->
+        <div class="newsletter__container">
+            <div class="newsletter__text">
+                <h1>Join our News Letter</h1>
+                <p>Signup for our email newspaper to get exclusive discounts, updates, and
+                    more</p>
+                <input type="text" style="width: 80%; padding: 10px; margin-top: 10px;">
+                <button>Subscribe &rarr;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div>
+            <h1>Nostra</h1>
+            <p>Crafting Elegance and Tradition Since 1900 — Where
+                Heritage Meets Modern Style</p>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank">
+                <i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-square-facebook"></i></a>
+            <p style="font-size: 2vw;padding-top: 10px;">@2025 Nostra.com</p>
+        </div>
+    </div>
+
+    <script src="collection.js"></script>
+</body>
+
+</html>
