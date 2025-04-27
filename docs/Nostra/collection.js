@@ -49,59 +49,69 @@ mostWantedLinks.forEach((mostWantedLink) => {
     });
 });
 
-// Functionality to filter products based on search input
-search.addEventListener("keyup", function (event) {
-    var searchValue = event.target.value.toLowerCase();
+// Functionality to filter products based on selected checkboxes and search input
+function filterProducts() {
+    var searchTerm = search.value.trim().toLowerCase();
+
+    // Organize selected filters by key
+    var selectedFilters = {};
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            if (!selectedFilters[checkbox.name]) {
+                selectedFilters[checkbox.name] = [];
+            }
+            selectedFilters[checkbox.name].push(checkbox.value);
+        }
+    });
+
     products.forEach((product) => {
+        var matchesFilters = true;
+
+        // Check all selected filter groups
+        for (var key in selectedFilters) {
+            var productAttr = product.getAttribute(`data-${key}`) || "";
+            
+            // For each key, at least one selected value should match the product attribute
+            var matchThisKey = selectedFilters[key].some((value) => {
+                return productAttr.split(",").includes(value);
+            });
+
+            if (!matchThisKey) {
+                matchesFilters = false;
+                break;
+            }
+        }
+
         var productName = product.querySelector(".product_name").textContent.toLowerCase();
-        var matchesSearch = productName.includes(searchValue);
-        var selectedFilters = Array.from(checkboxes)
-            .filter((checkbox) => checkbox.checked)
-            .map((checkbox) => ({
-            key: checkbox.name,
-            value: checkbox.value,
-            }));
-        var matchesFilters = selectedFilters.every((filter) => {
-            return product.getAttribute(`data-${filter.key}`) === filter.value;
-        });
-        if ((matchesSearch || searchValue === "") && (selectedFilters.length === 0 || matchesFilters)) {
+        var matchesSearch = productName.includes(searchTerm);
+
+        // Show only if matches filters and search term
+        if (matchesFilters && matchesSearch) {
             product.style.display = "flex";
         } else {
             product.style.display = "none";
         }
     });
+}
+
+// Checkboxes event
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+        search.value = "";
+        filterProducts();
+    });
 });
 
-// Functionality to clear all filters when the "Clear All" button is clicked
+// Search input event
+search.addEventListener("input", function () {
+    filterProducts();
+});
+
+// Clear all filters button
 filterbtn.addEventListener("click", function () {
     checkboxes.forEach((checkbox) => {
         checkbox.checked = false;
     });
-    products.forEach((product) => {
-        product.style.display = "flex";
-    });
-});
-
-// Functionality to filter products based on selected checkboxes
-checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", function () {
-        search.value = "";
-        var selectedFilters = Array.from(checkboxes)
-            .filter((checkbox) => checkbox.checked)
-            .map((checkbox) => ({
-                key: checkbox.name,
-                value: checkbox.value,
-            }));
-        products.forEach((product) => {
-            var matches = selectedFilters.some((filter) => {
-                var productAttributes = product.getAttribute(`data-${filter.key}`)?.split(",") || [];
-                return productAttributes.includes(filter.value);
-            });
-            if (selectedFilters.length === 0 || matches) {
-                product.style.display = "flex";
-            } else {
-                product.style.display = "none";
-            }
-        });
-    });
+    search.value = "";
+    filterProducts();
 });
